@@ -6,14 +6,16 @@ import java.util.List;
 
 public interface UserDao
 {
-    public int add(User user,String type)
-            throws SQLException;
-    public void delete(int id,String type)
-            throws SQLException;
-    public User getUser(int id, String type)
-            throws SQLException;
-    public List<User> getUsers(String type)
-            throws SQLException;
-    public void update(User user,String type)
-            throws SQLException;
+    public int add(User user,String type);
+
+    public void delete(int id,String type);
+
+    public User getUser(int id, String type);
+
+    public User getUser(String userName, String type);
+
+    public List<User> getUsers(String type);
+
+    public void update(User user,String type);
+
 }

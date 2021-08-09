@@ -19,14 +19,24 @@ public class Main {
         System.out.println(userDao.getUsers("learner"));
 
         TopicDao top = new TopicDaoImplementation();
-        CategoryDao cat = new CategoryDaoImplementation();*/
+        CategoryDao cat = new CategoryDaoImplementation();
 
-        CourseDao cor = new CourseDaoImplementation();
+        UserDao userDao = new UserDaoImplementation();
+        System.out.println(userDao.getUser("dinesh@1234","instructor"));*/
 
-        Course course = cor.getCourse(3);
-        course.setNoOfEnrolledStudents(course.getNoOfEnrolledStudents() +1);
-        cor.update(course);
-        System.out.println(cor.getCourses());
+        SignupLoginFlow s =  new SignupLoginFlow();
+
+        s.start();
+
+
+
+
+       // CourseDao cor = new CourseDaoImplementation();
+
+        //Course course = cor.getCourse(3);
+        //course.setNoOfEnrolledStudents(course.getNoOfEnrolledStudents() +1);
+        //cor.update(course);
+       // System.out.println(cor.getCourses());
 
 
 
