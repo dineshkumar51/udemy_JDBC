@@ -12,7 +12,7 @@ import java.util.List;
 
 public class UserDaoImplementation implements UserDao
 {
-    static Connection con = MysqlConnection.getConnection();
+    private static Connection con = MysqlConnection.getConnection();
 
     @Override
     public int add(User user, String type) throws SQLException

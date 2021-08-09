@@ -12,7 +12,7 @@ import java.util.List;
 public class CategoryDaoImplementation implements CategoryDao
 {
 
-    static Connection con = MysqlConnection.getConnection();
+    private static Connection con = MysqlConnection.getConnection();
 
     @Override
     public List<Category> getCategories() throws SQLException

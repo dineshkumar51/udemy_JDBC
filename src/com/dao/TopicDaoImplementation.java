@@ -12,7 +12,7 @@ import java.util.List;
 
 public class TopicDaoImplementation implements TopicDao
 {
-    Connection con = MysqlConnection.getConnection();
+    private Connection con = MysqlConnection.getConnection();
 
     @Override
     public List<Topic> getTopics() throws SQLException

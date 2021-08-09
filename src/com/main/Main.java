@@ -2,6 +2,7 @@ package com.main;
 
 import com.dao.*;
 import com.model.Category;
+import com.model.Course;
 import com.model.Instructor;
 import com.model.Learner;
 
@@ -15,12 +16,19 @@ public class Main {
         userDao.add(l,"learner");
         userDao.update(l,"learner");
         userDao.delete(3,"learner");
-        System.out.println(userDao.getUsers("learner"));*/
+        System.out.println(userDao.getUsers("learner"));
 
         TopicDao top = new TopicDaoImplementation();
-        CategoryDao cat = new CategoryDaoImplementation();
+        CategoryDao cat = new CategoryDaoImplementation();*/
 
-        System.out.println(top.getTopics());
+        CourseDao cor = new CourseDaoImplementation();
+
+        Course course = cor.getCourse(3);
+        course.setNoOfEnrolledStudents(course.getNoOfEnrolledStudents() +1);
+        cor.update(course);
+        System.out.println(cor.getCourses());
+
+
 
     }
 }
